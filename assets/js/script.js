@@ -1,16 +1,35 @@
-function RestOfDivision() {
+function number() {
     var firstNumber = document.getElementById('firstNumber').value; //type string
     var secondNumber = document.getElementById('secondNumber').value; // type string
-      //isNan(parameter) is Not a Number
-      // ! NOT
+      // isNaN(parameter) = is Not a Number ; pour vérifier s'il ne sagit pas d'un nombre
+      // isNaN = false
+      // !isNan = true
+      // ! = NOT
 
-    if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
-        var remainder = firstNumber % secondNumber;
-        alert("le reste de la division :" + remainder);
+    if (!isNaN(firstNumber) == false && !isNaN(secondNumber)){
+
+      if(secondNumber != 0){
+// != signifie que c'est différent
+        var result = firstNumber % secondNumber;
+// % est le modulo
+        alert(result);
+
+        }else{
+
+          alert('Mettre un chiffre différent de 0 svp.');
+
         }
+      }
     else {
-        alert("Donner moi des nombre, svp ! ")
+        alert('Mettre un chiffre à partir de 1 svp.');
     }
 
-
 }
+
+
+// == égalité
+// > supérieur
+// > inférieur
+// >= supérieur ou égal
+// <= inférieur ou égal
+// != différent
